@@ -3,7 +3,7 @@ services:
   app:
     build:
       context: ./docker/php
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.PHP
     volumes:
       - ./src:/var/www/html
     ports:
@@ -13,7 +13,7 @@ services:
   db:
     build:
       context: ./docker/mysql
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.mysql
     volumes:
       - ./docker/mysql/data:/var/lib/mysql
     ports:
